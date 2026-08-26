@@ -1,0 +1,10 @@
+bias.greatsolomonmpservices.com
+core1.greatsolomonmpservices.com
+core2.greatsolomonmpservices.com
+core4.greatsolomonmpservices.com
+crm.greatsolomonmpservices.com
+edcb.greatsolomonmpservices.com
+fam.greatsolomonmpservices.com
+fm.greatsolomonmpservices.com
+ftm.greatsolomonmpservices.com
+scim.greatsolomonmpservices.com
