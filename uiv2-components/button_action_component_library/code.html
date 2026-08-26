@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<link href="../app.css" rel="stylesheet"/>
+<script src="../app.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Button Component Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen p-8 md:p-12 lg:p-24 antialiased">
+<div class="max-w-6xl mx-auto space-y-16">
+<header class="mb-12 border-b border-outline-variant/50 pb-8">
+<h1 class="font-headline text-4xl font-bold text-primary mb-4 tracking-tight">Button Component Library</h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">A comprehensive collection of button states and variants designed for the Laravel Breeze static UI template, utilizing the defined color tokens and typography hierarchy.</p>
+</header>
+<!-- 1. Primary Buttons -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">1. Primary Buttons</h2>
+<p class="text-on-surface-variant text-sm mb-6">Standard and large sizes using primary accent colors.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-wrap items-end gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Small</span>
+<button class="bg-primary text-on-primary text-sm font-medium px-3 py-1.5 rounded hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+                        Action
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Standard</span>
+<button class="bg-primary text-on-primary text-sm font-medium px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                        Save Changes
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Large</span>
+<button class="bg-primary text-on-primary text-base font-semibold px-6 py-3 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+                        Create Account
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">With Icon</span>
+<button class="bg-primary text-on-primary text-sm font-medium px-4 py-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                        Send Message
+                    </button>
+</div>
+</div>
+</section>
+<!-- 2. Secondary Buttons -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">2. Secondary Buttons</h2>
+<p class="text-on-surface-variant text-sm mb-6">Subtle backgrounds for alternative actions.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-wrap items-end gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Standard</span>
+<button class="bg-surface-container-highest text-on-surface font-medium text-sm px-4 py-2 rounded-lg hover:bg-surface-dim transition-colors shadow-sm border border-outline-variant/50 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">close</span>
+                        Cancel
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Soft</span>
+<button class="bg-secondary-container text-on-secondary-container font-medium text-sm px-4 py-2 rounded-lg hover:brightness-95 transition-all shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                        View Details
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">With Icon</span>
+<button class="bg-surface-container-highest text-on-surface font-medium text-sm px-4 py-2 rounded-lg hover:bg-surface-dim transition-colors shadow-sm border border-outline-variant/50 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                        Export Data
+                    </button>
+</div>
+</div>
+</section>
+<!-- 3. Danger/Delete Buttons -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">3. Danger/Destructive</h2>
+<p class="text-on-surface-variant text-sm mb-6">Error-colored buttons for critical or destructive actions.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-wrap items-end gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Primary Danger</span>
+<button class="bg-error text-on-error font-medium text-sm px-4 py-2 rounded-lg hover:bg-error/90 transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+                        Delete Project
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Secondary Danger</span>
+<button class="bg-error-container text-on-error-container font-medium text-sm px-4 py-2 rounded-lg hover:brightness-95 transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+                        Remove User
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">With Icon</span>
+<button class="bg-error text-on-error font-medium text-sm px-4 py-2 rounded-lg hover:bg-error/90 transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+                        Confirm Deletion
+                    </button>
+</div>
+</div>
+</section>
+<!-- 4. Disabled States -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">4. Disabled States</h2>
+<p class="text-on-surface-variant text-sm mb-6">Unclickable states for various button types.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-wrap items-end gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Primary Disabled</span>
+<button class="bg-surface-variant text-on-surface-variant/50 font-medium text-sm px-4 py-2 rounded-lg cursor-not-allowed opacity-70 flex items-center gap-2" disabled="">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                        Save Changes
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Secondary Disabled</span>
+<button class="bg-surface-container-lowest text-outline border border-outline-variant/50 font-medium text-sm px-4 py-2 rounded-lg cursor-not-allowed opacity-70 flex items-center gap-2" disabled="">
+<span class="material-symbols-outlined text-[18px]">close</span>
+                        Cancel
+                    </button>
+</div>
+</div>
+</section>
+<!-- 5. Icon Buttons -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">5. Icon Buttons</h2>
+<p class="text-on-surface-variant text-sm mb-6">Square and circular buttons for icon-only actions.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-wrap items-end gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Square (Standard)</span>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary p-2 rounded-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface p-2 rounded-lg hover:bg-surface-dim transition-colors shadow-sm border border-outline-variant/50 flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="bg-error-container text-on-error-container p-2 rounded-lg hover:brightness-95 transition-colors shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Circular (FAB style)</span>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary p-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-md flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="bg-surface-container-highest text-on-surface p-3 rounded-full hover:bg-surface-dim transition-colors shadow-sm border border-outline-variant/50 flex items-center justify-center">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Outline Buttons -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">6. Outline Buttons</h2>
+<p class="text-on-surface-variant text-sm mb-6">Transparent backgrounds with colored borders.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-wrap items-end gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Primary Outline</span>
+<button class="bg-transparent text-primary font-medium text-sm px-4 py-2 rounded-lg border border-primary hover:bg-primary/10 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">info</span>
+                        Learn More
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Neutral Outline</span>
+<button class="bg-transparent text-on-surface font-medium text-sm px-4 py-2 rounded-lg border border-outline hover:bg-on-surface/5 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+                        Secondary Action
+                    </button>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Danger Outline</span>
+<button class="bg-transparent text-error font-medium text-sm px-4 py-2 rounded-lg border border-error hover:bg-error/10 transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">layers_clear</span>
+                        Clear Data
+                    </button>
+</div>
+</div>
+</section>
+<!-- 7. Button Groups -->
+<section class="space-y-6">
+<div>
+<h2 class="font-headline text-2xl font-semibold mb-2">7. Button Groups</h2>
+<p class="text-on-surface-variant text-sm mb-6">Connected horizontal groups of buttons.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/30 flex flex-col gap-8">
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Text / Toggle Group</span>
+<div class="inline-flex rounded-lg shadow-sm" role="group">
+<button class="px-4 py-2 text-sm font-medium text-on-surface bg-surface-container-highest border border-outline-variant/50 rounded-l-lg hover:bg-surface-dim hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">today</span>
+                            Daily
+                        </button>
+<button class="px-4 py-2 text-sm font-medium text-primary bg-surface-dim border-t border-b border-r border-outline-variant/50 hover:bg-surface-dim hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">date_range</span>
+                            Weekly
+                        </button>
+<button class="px-4 py-2 text-sm font-medium text-on-surface bg-surface-container-highest border-t border-b border-r border-outline-variant/50 rounded-r-lg hover:bg-surface-dim hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary focus:text-primary transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_month</span>
+                            Monthly
+                        </button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Icon Group</span>
+<div class="inline-flex rounded-lg shadow-sm" role="group">
+<button class="p-2 text-sm font-medium text-on-surface bg-surface-container-highest border border-outline-variant/50 rounded-l-lg hover:bg-surface-dim hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">format_align_left</span>
+</button>
+<button class="p-2 text-sm font-medium text-on-surface bg-surface-container-highest border-t border-b border-r border-outline-variant/50 hover:bg-surface-dim hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">format_align_center</span>
+</button>
+<button class="p-2 text-sm font-medium text-on-surface bg-surface-container-highest border-t border-b border-r border-outline-variant/50 rounded-r-lg hover:bg-surface-dim hover:text-primary focus:z-10 focus:ring-2 focus:ring-primary transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">format_align_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</body></html>
+
+
+
+
+

@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<link href="../app.css" rel="stylesheet"/>
+<script src="../app.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UI Component Library - Badges, Avatars & Indicators</title>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<!-- Design System / Tailwind Config -->
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen p-8 md:p-12 lg:p-16">
+<div class="max-w-6xl mx-auto space-y-16">
+<!-- Header -->
+<header class="mb-12 border-b border-outline-variant pb-6">
+<h1 class="font-headline text-3xl font-bold text-primary mb-2">UI Component Library</h1>
+<p class="font-body text-on-surface-variant text-lg">Badges, Avatars, and Indicators</p>
+</header>
+<!-- 1. Status Badges -->
+<section class="space-y-6">
+<h2 class="font-headline text-xl font-semibold text-on-background border-b border-surface-variant pb-2">1. Status Badges</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Basic Badges -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Basic</h3>
+<div class="flex flex-wrap gap-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">Default</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-container text-on-primary-container">Primary</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-error-container text-on-error-container">Error</span>
+</div>
+</div>
+<!-- With Icons -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">With Icons</h3>
+<div class="flex flex-wrap gap-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px] mr-1">check_circle</span>
+                            Success
+                        </span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] mr-1">schedule</span>
+                            Pending
+                        </span>
+</div>
+</div>
+<!-- Outline -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Outline</h3>
+<div class="flex flex-wrap gap-3">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-outline text-on-surface">Outline</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-primary text-primary">Primary</span>
+</div>
+</div>
+<!-- Live Pulse -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Live Pulse</h3>
+<div class="flex flex-wrap gap-3 items-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">
+<span class="relative flex h-2 w-2 mr-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            Live Now
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Count Indicators -->
+<section class="space-y-6">
+<h2 class="font-headline text-xl font-semibold text-on-background border-b border-surface-variant pb-2">2. Count Indicators</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Standalone Pills -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Standalone</h3>
+<div class="flex flex-wrap items-center gap-4">
+<span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-on-primary bg-primary rounded-full">5</span>
+<span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-on-error bg-error rounded-full">12</span>
+<span class="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-on-surface-variant bg-surface-variant rounded-full">99+</span>
+</div>
+</div>
+<!-- Embedded in Icons -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Embedded</h3>
+<div class="flex flex-wrap items-center gap-6">
+<div class="relative inline-block">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant">notifications</span>
+<span class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-on-error bg-error rounded-full translate-x-1/4 -translate-y-1/4">3</span>
+</div>
+<div class="relative inline-block">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant">mail</span>
+<span class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-bold leading-none text-on-primary bg-primary rounded-full translate-x-1/4 -translate-y-1/4">14</span>
+</div>
+</div>
+</div>
+<!-- Dot Indicators -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Dot Only</h3>
+<div class="flex flex-wrap items-center gap-6">
+<div class="relative inline-block">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant">chat</span>
+<span class="absolute top-0 right-0 block h-2.5 w-2.5 rounded-full bg-error ring-2 ring-surface translate-x-1/4 -translate-y-1/4"></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. User Avatars -->
+<section class="space-y-6">
+<h2 class="font-headline text-xl font-semibold text-on-background border-b border-surface-variant pb-2">3. User Avatars</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Image Avatars -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Image (SM to XL)</h3>
+<div class="flex items-end gap-4">
+<img alt="Avatar SM" class="h-8 w-8 rounded-full object-cover ring-2 ring-surface" data-alt="A detailed headshot portrait of a professional woman with short dark hair, smiling warmly. Lighting is soft and natural, background is subtly blurred white to match a clean minimalist UI aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3OzCDs51rrBbUqSMQ9qDWdV5R87QIeTVa-dv1Tbk3UdCWuPQB_maqY4sV35ylLRV87i-ct5owdw1KycKbNNzf0x9uSMuIVZs9W65__yUKacl7e5o747OgKk3hYm8Jiq8G3zvcFd9om3OGsTlpFQ32TSHmqLKe0biIRu3gW3PC3womco6_GL_Zp2fOhwTPwOyfIIyD4rG_8FHN-vFhPvi405ofep8ntCpzlksecHIKYlXbLpSyNRXuQhTmC4IHcBfbvpBWY7qobg4"/>
+<img alt="Avatar MD" class="h-10 w-10 rounded-full object-cover ring-2 ring-surface" data-alt="A detailed headshot portrait of a young man with glasses, looking directly at the camera. Professional studio lighting, clean light background fitting a modern web application design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRRIA_vCDX0IX22z7xHu-brioxvrsG1qHdRqr2_wapO0rGaRrIpVpP6i7897PnBZmgjeELDIQkLQD9J5W2Cdsx8tTzacT6HFnskFpZ17onyJKDzqMfQ7pCu5x2BOtm0Sh699kC5_BFBjFaM3KthL2IctiBYG8IFguduXM6D0Y5BszAjvehL3GR5npZGvNj_aO82cS6F_yjfH6PEZSzrVnWjHBE00SRoMpLL48ldmG-5_pYfBOR8Esv3gRnSRkg4dfBHgeuziBoZcE"/>
+<img alt="Avatar LG" class="h-12 w-12 rounded-full object-cover ring-2 ring-surface" data-alt="A highly detailed close-up portrait of a woman with curly hair, natural makeup, professional attire. Shot against a pristine light grey background suitable for a premium UI dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzk1NwTCJxBGDoBhnmdQIj3O2_glIYmEHntSYdouH3lhjEY2T1T5jBxUsArgmqlgri6pEh4Wdj5GfOi0qUwqlUQqCnSKQuxPSreS1lXW2C92jw4vZQapapU51V2w-rxhhPi2F0VajMaRpV314wtjRZ_lcM6W4LpXCGQkxWaEmb7WJtKD-vESzdf_eh7aJLy-5F2XbDFGXe3jzwiPSA617Mxp2_YFxwkICQOzi4XKGxkr4w4Sr176SZpwfcYNV1YnIEKXfWbyMfAbI"/>
+<img alt="Avatar XL" class="h-16 w-16 rounded-full object-cover ring-2 ring-surface" data-alt="A crisp, high-resolution portrait of a senior man with a neat beard, wearing a casual blazer. Soft studio lighting creating a trustworthy and professional mood against a white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1L8hbStPhu3hARrOgUyW8cCzDZUo3wU9mP4owfs2uVPCTC31paeixwFXnV8TYE_QdQ4Ak5AaamsGKsYqOhCo_oYbou1sbJZYirsRImDp6ny2Fb5mSTVZWiber5UZSnoElLgQ94caUAf3dWQoZpADrREt3c3sJ4taoM3Ojy-LnEmbaHxQhJ8gGEcvMZGi8s6LXdXQrSfow5HXwF91-qDQvV-aNpBXMrVi9x0LcmvG2fD1puTDMnBAlp0358pNQVczFD1izPlARmxk"/>
+</div>
+</div>
+<!-- Initials -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Initials Fallback</h3>
+<div class="flex items-end gap-4">
+<div class="flex items-center justify-center h-8 w-8 rounded-full bg-primary-container text-on-primary-container font-semibold text-xs ring-2 ring-surface">JD</div>
+<div class="flex items-center justify-center h-10 w-10 rounded-full bg-secondary-container text-on-secondary-container font-semibold text-sm ring-2 ring-surface">AS</div>
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-tertiary-container text-on-tertiary-container font-semibold text-base ring-2 ring-surface">MK</div>
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-surface-variant text-on-surface-variant font-semibold text-lg ring-2 ring-surface">RW</div>
+</div>
+</div>
+<!-- Default Icon -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Icon Fallback</h3>
+<div class="flex items-end gap-4">
+<div class="flex items-center justify-center h-8 w-8 rounded-full bg-surface-container-highest text-on-surface-variant ring-2 ring-surface">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<div class="flex items-center justify-center h-10 w-10 rounded-full bg-surface-container-highest text-on-surface-variant ring-2 ring-surface">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<div class="flex items-center justify-center h-12 w-12 rounded-full bg-surface-container-highest text-on-surface-variant ring-2 ring-surface">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</div>
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-surface-container-highest text-on-surface-variant ring-2 ring-surface">
+<span class="material-symbols-outlined text-[32px]">person</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Avatar Stacks -->
+<section class="space-y-6">
+<h2 class="font-headline text-xl font-semibold text-on-background border-b border-surface-variant pb-2">4. Avatar Stacks</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Stack Small -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Small Stack</h3>
+<div class="flex -space-x-2 overflow-hidden py-1">
+<img alt="User 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-surface object-cover" data-alt="A portrait of a person suitable for a small UI avatar, clean background, high quality lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAyt9NPFGhntJFzizkRWaPxsT2exu3-rp2d3hLSI2wI6vzQv9e71fLCUCzCRttMvJ9Bd_154mio5MSDwROiHMboKrMiGOii0Z7AfRvrDPGoQsb2vgOEoMiOgdm8Z7b4x76Thn1MIsY44OXgakCfs5ERxff1VdGxwhWr0QTztZrw2Kpr_jhPURp-ODxnN84I1wO9pTli6AwDNvrSOBzT2GUTiv0BXyHcuPMQ3MJa8TrbUDS7JHZqKp9N8kTEvRBRRS24NgZVfhk9bw"/>
+<img alt="User 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-surface object-cover" data-alt="A portrait of a person suitable for a small UI avatar, clean background, high quality lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmBwYeOf8RGFjaF4USrI8gftELpa6iEiGpvfKvciqn1FJGudRy0Wsmx5TMx5Yj3coDqe1KMNa7HFAdIoboLfV4WdcMwHTUpERVLISEMuqvMY1tmKBmtissx4JsaFjQJBTSQEXIfC0xB7wForXNWkHEzaXinOOEnBB0ENoGHMN2AEH4dnDRxYN854E71LZUW3PElRVLZvqrWBoOGkCMG3B-IFSb1oiRqEU_v0tt8VoYAA2Ryb3Rvk0v5qk_umsTTGWTK-XyAK1xMM0"/>
+<img alt="User 3" class="inline-block h-8 w-8 rounded-full ring-2 ring-surface object-cover" data-alt="A portrait of a person suitable for a small UI avatar, clean background, high quality lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf9GXGKQeK06lj5di64wc9LkB4l6cySQaHKp92SycrKL1mJJuQA-BP6IC7_-CkS-VsY5H58c1pez74rl_40T1iLAGnIErpfsFkqn_h_k-5ZKrCJ-FgbDGWngabhgq3v28LglhbjHxSDcpQ6RVqQqzhOMK8B6GQV0mZqrn2iyrnv69u9NasyAfq-fugtlzTCWdX5luBLfHiaH277b4p8eWmxBiMa5TLQRGnP0BI6JbpdV-owdqHNpg5ZgtkGCjKyB_9FH9qwp_lWSA"/>
+<div class="flex items-center justify-center h-8 w-8 rounded-full bg-surface-variant text-on-surface-variant ring-2 ring-surface text-xs font-medium z-10 relative">+4</div>
+</div>
+</div>
+<!-- Stack Medium -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Medium Stack</h3>
+<div class="flex -space-x-3 overflow-hidden py-1">
+<img alt="User 1" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface object-cover" data-alt="A portrait of a person suitable for a medium UI avatar, professional studio lighting, neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDagcC-OgZHMKbzQs9-26HKQoQiBKnXOkGyv1CuqSpFsFl_5rvyOiOT_lQr1IucTalUMzP3xa6Yv__Udu6LY3QvOWoe1aY2wXPvq-jX4VzMzgty1Qzuj8IC9--xvIOP3i5SZNKH4fKwqncx5hh7p2rV5XKTVSN4UCZ0u48TGkbFCRdQ6S6H5XtQkbba5D2hfn9tHgvIWrWjPuxBTV5h_Oe7PLyb04aJrLuKi0n26Aw8_PppGTLoQTu8XU3C4CUdugi0BwYKdBh1w"/>
+<img alt="User 2" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface object-cover" data-alt="A portrait of a person suitable for a medium UI avatar, professional studio lighting, neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpF8zaz957fp4Ro6Py54aJWDJ32WrQAUWUtv1JGPR4Fr0K2WE1__ixIDp_qPWgJmOmz6jalNXUrnATYXQLY-1rWPbEMV8kSbFJZctwsyyIi1Fd6lJFNEhz19x2is3jMqrBNMFOCKtHyUMR-ZDZlV5rUcBIjtUehqaFnoYV-2MPJ6b5Y_pTMVcX85P51Z1JsnvB9hLabuTxYfgPbYNg5iUdJMo5bTTtzZNJoHE1Fh1qUQx6yKVQhDLPbkX0ipFTm0uSc5am2HxXjc0"/>
+<img alt="User 3" class="inline-block h-10 w-10 rounded-full ring-2 ring-surface object-cover" data-alt="A portrait of a person suitable for a medium UI avatar, professional studio lighting, neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhT58lCYrH5EzCEYgjjDORDmCYYsF0ET2EwCLSbX44qa2MPAZN6jPPaH-LmF9T8M3W0d_egIEtPtRlnmEhRo3q5ud81O3Ij40tsw3AOCjrZ-FNpCW7FA57TmMCFxoJY2vfOVu5p_1BYl7IqDcdHNDfgHbXY4d26bPlcDCYqVjODftNOWEZeuGy-rAnyB-4JUG-yE1sZcfwH5PKAaYBn9coyGTY_JC2Qlj41PmNvP0yc7ZW2ugDdbYSKEdHQFtennAI4DWZW6r9QMA"/>
+<div class="flex items-center justify-center h-10 w-10 rounded-full bg-primary-container text-on-primary-container ring-2 ring-surface text-sm font-medium z-10 relative">+12</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Filter Tags/Chips -->
+<section class="space-y-6">
+<h2 class="font-headline text-xl font-semibold text-on-background border-b border-surface-variant pb-2">5. Filter Tags / Chips</h2>
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-outline">Removable Chips</h3>
+<div class="flex flex-wrap gap-3">
+<span class="inline-flex items-center pl-3 pr-1.5 py-1.5 rounded-full text-sm font-medium bg-surface-container-high text-on-surface">
+                        Design System
+                        <button class="ml-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-variant hover:text-on-surface focus:bg-surface-variant focus:text-on-surface focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center pl-3 pr-1.5 py-1.5 rounded-full text-sm font-medium bg-primary-container text-on-primary-container">
+                        Tailwind CSS
+                        <button class="ml-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-primary hover:bg-primary/20 focus:bg-primary/20 focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+<span class="inline-flex items-center pl-3 pr-1.5 py-1.5 rounded-full text-sm font-medium border border-outline text-on-surface">
+                        Components
+                        <button class="ml-1 inline-flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-variant hover:text-on-surface focus:bg-surface-variant focus:text-on-surface focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[14px]">close</span>
+</button>
+</span>
+</div>
+</div>
+</section>
+</div>
+</body></html>
+
+
+
+
+

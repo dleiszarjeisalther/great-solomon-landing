@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<link href="../app.css" rel="stylesheet"/>
+<script src="../app.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Form Input Controls - UI Standard Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased p-8 md:p-12 lg:p-16">
+<div class="max-w-6xl mx-auto space-y-16">
+<header class="pb-8 border-b border-outline-variant">
+<h1 class="text-3xl font-headline font-bold text-on-surface tracking-tight">Form Controls Library</h1>
+<p class="mt-2 text-on-surface-variant">Standardized input components built following the Laravel Breeze design system.</p>
+</header>
+<!-- 1. Text Inputs -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">1. Text Inputs</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Standard Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface" for="input-standard">Standard Input</label>
+<input class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary-container focus:ring focus:ring-primary-container/50 bg-surface-container-lowest text-on-surface transition-colors" id="input-standard" placeholder="Placeholder text" type="text"/>
+</div>
+<!-- Input with Helper Text -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface" for="input-helper">Input with Helper Text</label>
+<input class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary-container focus:ring focus:ring-primary-container/50 bg-surface-container-lowest text-on-surface transition-colors" id="input-helper" placeholder="example@email.com" type="text"/>
+<p class="text-xs text-on-surface-variant font-label">We'll never share your email with anyone else.</p>
+</div>
+<!-- Disabled Input -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface-variant" for="input-disabled">Disabled Input</label>
+<input class="w-full rounded-md border-outline-variant/50 shadow-sm bg-surface-container-highest text-on-surface-variant cursor-not-allowed" disabled="" id="input-disabled" type="text" value="Disabled value"/>
+</div>
+</div>
+</section>
+<!-- 2. Validation States -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">2. Validation States</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Error State -->
+<div class="space-y-2 relative">
+<label class="block font-label text-sm font-medium text-error" for="input-error">Email Address</label>
+<div class="relative">
+<input aria-invalid="true" class="w-full rounded-md border-error text-error shadow-sm focus:border-error focus:ring focus:ring-error/50 bg-error-container/20 pr-10" id="input-error" type="email" value="invalid-email"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-error" data-icon="error">error</span>
+</div>
+</div>
+<p class="text-xs text-error font-label mt-1">Please enter a valid email address.</p>
+</div>
+<!-- Success State -->
+<div class="space-y-2 relative">
+<label class="block font-label text-sm font-medium text-primary" for="input-success">Username</label>
+<div class="relative">
+<input class="w-full rounded-md border-primary text-on-surface shadow-sm focus:border-primary focus:ring focus:ring-primary/50 bg-surface-container-lowest pr-10" id="input-success" type="text" value="valid_user123"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+<p class="text-xs text-primary font-label mt-1">Username is available.</p>
+</div>
+</div>
+</section>
+<!-- 3. Textareas -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">3. Textareas</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Standard Textarea -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface" for="textarea-standard">Standard Textarea</label>
+<textarea class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary-container focus:ring focus:ring-primary-container/50 bg-surface-container-lowest text-on-surface transition-colors" id="textarea-standard" placeholder="Write your message here..." rows="4"></textarea>
+</div>
+<!-- Textarea with Character Hint -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface" for="textarea-hint">Bio</label>
+<textarea class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary-container focus:ring focus:ring-primary-container/50 bg-surface-container-lowest text-on-surface transition-colors" id="textarea-hint" placeholder="Tell us a little about yourself..." rows="4"></textarea>
+<div class="flex justify-between items-center text-xs font-label">
+<p class="text-on-surface-variant">Brief description for your profile.</p>
+<p class="text-on-surface-variant font-medium">0 / 250</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Selection -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">4. Selection</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Native Select -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface" for="select-native">Country</label>
+<select class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary-container focus:ring focus:ring-primary-container/50 bg-surface-container-lowest text-on-surface transition-colors" id="select-native">
+<option disabled="" selected="" value="">Select an option...</option>
+<option value="us">United States</option>
+<option value="ca">Canada</option>
+<option value="uk">United Kingdom</option>
+</select>
+</div>
+<!-- Multi-Select (Native) -->
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface" for="select-multi">Interests</label>
+<select class="w-full rounded-md border-outline-variant shadow-sm focus:border-primary-container focus:ring focus:ring-primary-container/50 bg-surface-container-lowest text-on-surface transition-colors" id="select-multi" multiple="">
+<option value="tech">Technology</option>
+<option value="design">Design</option>
+<option value="business">Business</option>
+<option value="marketing">Marketing</option>
+</select>
+<p class="text-xs text-on-surface-variant font-label mt-1">Hold Cmd/Ctrl to select multiple.</p>
+</div>
+</div>
+</section>
+<!-- 5. Checkboxes & Radios -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">5. Checkboxes &amp; Radio Buttons</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Checkboxes -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-on-surface">Notification Preferences</h3>
+<div class="space-y-3">
+<div class="flex items-start">
+<div class="flex items-center h-5">
+<input class="w-4 h-4 text-primary-container bg-surface-container-lowest border-outline-variant rounded focus:ring-primary-container/50 focus:ring-2" id="chk-email" type="checkbox"/>
+</div>
+<div class="ml-3 text-sm">
+<label class="font-medium text-on-surface" for="chk-email">Email notifications</label>
+<p class="text-on-surface-variant font-label text-xs">Get updates directly to your inbox.</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="flex items-center h-5">
+<input checked="" class="w-4 h-4 text-primary-container bg-surface-container-lowest border-outline-variant rounded focus:ring-primary-container/50 focus:ring-2" id="chk-sms" type="checkbox"/>
+</div>
+<div class="ml-3 text-sm">
+<label class="font-medium text-on-surface" for="chk-sms">SMS notifications</label>
+<p class="text-on-surface-variant font-label text-xs">Receive alerts on your mobile device.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Radios -->
+<div class="space-y-4">
+<h3 class="font-label text-sm font-medium text-on-surface">Visibility Settings</h3>
+<div class="space-y-3">
+<div class="flex items-center">
+<input checked="" class="w-4 h-4 text-primary-container bg-surface-container-lowest border-outline-variant focus:ring-primary-container/50 focus:ring-2" id="radio-public" name="visibility" type="radio"/>
+<label class="ml-3 block text-sm font-medium text-on-surface" for="radio-public">Public</label>
+</div>
+<div class="flex items-center">
+<input class="w-4 h-4 text-primary-container bg-surface-container-lowest border-outline-variant focus:ring-primary-container/50 focus:ring-2" id="radio-private" name="visibility" type="radio"/>
+<label class="ml-3 block text-sm font-medium text-on-surface" for="radio-private">Private</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Toggle Switches -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">6. Toggle Switches</h2>
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest border border-outline-variant/30 rounded-lg shadow-sm">
+<div>
+<p class="font-medium text-on-surface text-sm">Two-Factor Authentication</p>
+<p class="text-xs text-on-surface-variant font-label">Add an extra layer of security to your account.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant rounded-full peer peer-focus:ring-4 peer-focus:ring-primary-container/30 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest border border-outline-variant/30 rounded-lg shadow-sm">
+<div>
+<p class="font-medium text-on-surface text-sm">Marketing Emails (Disabled)</p>
+<p class="text-xs text-on-surface-variant font-label">Receive promotional offers.</p>
+</div>
+<label class="relative inline-flex items-center cursor-not-allowed opacity-50">
+<input checked="" class="sr-only peer" disabled="" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- 7. File Upload -->
+<section class="space-y-8">
+<h2 class="text-xl font-headline font-semibold text-on-surface border-b border-outline-variant pb-2">7. File Upload</h2>
+<div class="w-full">
+<label class="block font-label text-sm font-medium text-on-surface mb-2">Upload Documents</label>
+<div class="flex items-center justify-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-48 border-2 border-outline-variant border-dashed rounded-lg cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors" for="dropzone-file">
+</label></div></div></section></div></body></html>
+
+
+
+
+

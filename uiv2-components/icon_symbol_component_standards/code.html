@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<link href="../app.css" rel="stylesheet"/>
+<script src="../app.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Icon Standards Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@100..700,0..1,-50..200,20..48&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill-1 {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen p-8 md:p-12 lg:p-16">
+<div class="max-w-7xl mx-auto space-y-16">
+<!-- Header -->
+<header class="mb-12">
+<h1 class="font-headline text-4xl font-bold text-on-surface mb-4">Icon Standards Library</h1>
+<p class="text-on-surface-variant text-lg max-w-3xl">Comprehensive reference for iconography usage, sizes, and states within the application. Utilize Material Symbols with proper sizing and color tokens.</p>
+</header>
+<!-- System Icon Grid -->
+<section>
+<div class="border-b border-outline-variant pb-4 mb-8">
+<h2 class="font-headline text-2xl font-semibold text-on-surface">1. System Icon Grid</h2>
+<p class="text-on-surface-variant mt-2 font-label text-sm">Categorized standard icons for common UI interactions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Actions -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">Actions</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">add</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">edit</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-error-container group-hover:text-on-error-container transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">delete</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="save">save</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">save</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">share</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">filter_list</span>
+</div>
+</div>
+</div>
+<!-- Navigation -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">Navigation</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">arrow_back</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">menu</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">chevron_right</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">home</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">dashboard</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined" data-icon="folder">folder</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">folder</span>
+</div>
+</div>
+</div>
+<!-- Status & Alerts -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">Status &amp; Alerts</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined icon-fill-1" data-icon="info">info</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">info</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-tertiary-container group-hover:bg-tertiary-container group-hover:text-on-tertiary-container transition-colors">
+<span class="material-symbols-outlined icon-fill-1" data-icon="warning">warning</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">warning</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-error group-hover:bg-error-container group-hover:text-on-error-container transition-colors">
+<span class="material-symbols-outlined icon-fill-1" data-icon="error">error</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">error</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-[#166534] group-hover:bg-[#dcfce7] transition-colors">
+<span class="material-symbols-outlined icon-fill-1" data-icon="check_circle">check_circle</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">check_circle</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined icon-fill-1" data-icon="verified">verified</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">verified</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary group-hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">schedule</span>
+</div>
+</div>
+</div>
+<!-- Client Management Subsystem -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">1. Client Management Subsystem</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">groups</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">person_add</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">search</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">assignment</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="engineering">engineering</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">engineering</span>
+</div>
+</div>
+</div>
+<!-- Employee Information Management System (HRIS) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">2. HRIS &amp; Employee Info</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">badge</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">schedule</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="beach_access">beach_access</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">beach_access</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="attach_money">attach_money</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">attach_money</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="star">star</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">star</span>
+</div>
+</div>
+</div>
+<!-- Employee Development, Compliance & Benefits -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">3. Employee Dev &amp; Benefits</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">school</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">description</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">gavel</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">health_and_safety</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">verified_user</span>
+</div>
+</div>
+</div>
+<!-- Governance, Safety & System Administration -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">4. Governance &amp; Safety</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="safety_check">safety_check</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">safety_check</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">gavel</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">admin_panel_settings</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">insights</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">inventory</span>
+</div>
+</div>
+</div>
+<!-- Financial Management System -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">5. Financial Management</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">account_balance_wallet</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">receipt_long</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">payments</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">account_balance</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="currency_exchange">currency_exchange</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">currency_exchange</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="request_quote">request_quote</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">request_quote</span>
+</div>
+</div>
+</div>
+<!-- Supply Chain & Inventory -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">6. Supply Chain &amp; Inventory</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="warehouse">warehouse</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">warehouse</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">inventory_2</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">shopping_bag</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">handshake</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">receipt_long</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">local_shipping</span>
+</div>
+</div>
+</div>
+<!-- Fleet & Transportation -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">7. Fleet &amp; Transportation</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">directions_car</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="directions_bus">directions_bus</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">directions_bus</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">timeline</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="local_gas_station">local_gas_station</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">local_gas_station</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">analytics</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">map</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="emoji_transportation">emoji_transportation</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">emoji_transportation</span>
+</div>
+</div>
+</div>
+<!-- Facilities & Administration -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">8. Facilities &amp; Administration</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="meeting_room">meeting_room</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">meeting_room</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">badge</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="folder">folder</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">folder</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">folder_shared</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">gavel</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">description</span>
+</div>
+</div>
+</div>
+<!-- Business Intelligence & Analytics -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">9. BI &amp; Analytics System</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">dashboard</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">trending_up</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">insights</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="insert_chart">insert_chart</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">insert_chart</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="storage">storage</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">storage</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="file_download">file_download</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">file_download</span>
+</div>
+</div>
+</div>
+<!-- Customer Relationship Management (CRM) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+<h3 class="font-headline text-sm font-semibold text-secondary uppercase tracking-wider mb-6">10. CRM &amp; Sales Tracking</h3>
+<div class="grid grid-cols-3 gap-6">
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="track_changes">track_changes</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">track_changes</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">forum</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">emoji_events</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">notifications</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-surface group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+</div>
+<span class="font-label text-xs text-on-surface-variant">timeline</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Size Variants -->
+<section>
+<div class="border-b border-outline-variant pb-4 mb-8">
+<h2 class="font-headline text-2xl font-semibold text-on-surface">2. Size Variants</h2>
+<p class="text-on-surface-variant mt-2 font-label text-sm">Standardized sizes for consistent layout rhythms.</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 shadow-sm flex flex-wrap items-end gap-12">
+<div class="flex flex-col items-center gap-4">
+<div class="h-12 flex items-end justify-center">
+<span class="material-symbols-outlined text-[16px] text-on-surface" data-icon="favorite">favorite</span>
+</div>
+<div class="text-center">
+<div class="font-headline font-medium text-sm text-on-surface">Extra Small</div>
+<div class="font-label text-xs text-on-surface-variant mt-1">16px</div>
+<div class="font-mono text-xs text-outline mt-1">text-[16px]</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="h-12 flex items-end justify-center">
+<span class="material-symbols-outlined text-[20px] text-on-surface" data-icon="favorite">favorite</span>
+</div>
+<div class="text-center">
+<div class="font-headline font-medium text-sm text-on-surface">Small</div>
+<div class="font-label text-xs text-on-surface-variant mt-1">20px</div>
+<div class="font-mono text-xs text-outline mt-1">text-[20px]</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="h-12 flex items-end justify-center">
+<span class="material-symbols-outlined text-[24px] text-on-surface" data-icon="favorite">favorite</span>
+</div>
+<div class="text-center">
+<div class="font-headline font-medium text-sm text-on-surface">Standard</div>
+<div class="font-label text-xs text-on-surface-variant mt-1">24px</div>
+<div class="font-mono text-xs text-outline mt-1">text-[24px]</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="h-12 flex items-end justify-center">
+<span class="material-symbols-outlined text-[32px] text-on-surface" data-icon="favorite">favorite</span>
+</div>
+<div class="text-center">
+<div class="font-headline font-medium text-sm text-on-surface">Large</div>
+<div class="font-label text-xs text-on-surface-variant mt-1">32px</div>
+<div class="font-mono text-xs text-outline mt-1">text-[32px]</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Color & State Variants -->
+<section>
+<div class="border-b border-outline-variant pb-4 mb-8">
+<h2 class="font-headline text-2xl font-semibold text-on-surface">3. Color &amp; State Variants</h2>
+<p class="text-on-surface-variant mt-2 font-label text-sm">Contextual coloring and interaction states.</p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<div class="grid grid-cols-5 bg-surface-container-low border-b border-outline-variant p-4 font-headline text-sm font-semibold text-on-surface-variant">
+<div>Variant</div>
+<div class="text-center">Default</div>
+<div class="text-center">Hover</div>
+<div class="text-center">Active / Filled</div>
+<div class="text-center">Disabled</div>
+</div>
+<!-- Primary -->
+<div class="grid grid-cols-5 p-4 items-center border-b border-outline-variant last:border-b-0 hover:bg-surface-container transition-colors">
+<div class="font-label text-sm font-medium text-on-surface">Primary</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-primary text-[24px]" data-icon="star">star</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-primary-container text-[24px] opacity-80" data-icon="star">star</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined icon-fill-1 text-primary text-[24px]" data-icon="star">star</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-on-surface text-[24px] opacity-30" data-icon="star">star</span></div>
+</div>
+<!-- On-Surface -->
+<div class="grid grid-cols-5 p-4 items-center border-b border-outline-variant last:border-b-0 hover:bg-surface-container transition-colors">
+<div class="font-label text-sm font-medium text-on-surface">On-Surface</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-on-surface text-[24px]" data-icon="settings">settings</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-on-surface-variant text-[24px]" data-icon="settings">settings</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined icon-fill-1 text-on-surface text-[24px]" data-icon="settings">settings</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-on-surface text-[24px] opacity-30" data-icon="settings">settings</span></div>
+</div>
+<!-- Danger -->
+<div class="grid grid-cols-5 p-4 items-center border-b border-outline-variant last:border-b-0 hover:bg-surface-container transition-colors">
+<div class="font-label text-sm font-medium text-on-surface">Danger</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-error text-[24px]" data-icon="delete">delete</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-on-error-container text-[24px]" data-icon="delete">delete</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined icon-fill-1 text-error text-[24px]" data-icon="delete">delete</span></div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-on-surface text-[24px] opacity-30" data-icon="delete">delete</span></div>
+</div>
+</div>
+</section>
+</div>
+</body></html>
+
+
+
+
+

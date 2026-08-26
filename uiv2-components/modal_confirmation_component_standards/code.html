@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../app.css?v=2">
+    <script src="../app.js?v=5" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Modals & Dialogs - Standard UI Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col selection:bg-primary/10 selection:text-primary">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-surface/80 backdrop-blur-md sticky top-0 z-30 border-b border-outline-variant/30 h-16 flex items-center px-6">
+        <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="flex items-center gap-2 text-sm font-medium text-on-surface-variant hover:text-primary transition-colors p-2 -ml-2 rounded-lg hover:bg-surface-container-low">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                    <span>Back to Catalog</span>
+                </a>
+                <span class="text-outline-variant select-none font-light">|</span>
+                <h1 class="font-headline font-bold text-lg text-on-surface flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">tab_unselected</span>
+                    Confirmation Modals &amp; Dialogs
+                </h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-primary-container/20 text-primary border border-primary/20">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Interactive Modals Enabled
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Showcase Content -->
+    <main class="flex-1 max-w-7xl mx-auto w-full p-6 md:p-10 space-y-12">
+        
+        <!-- Hero Header -->
+        <section class="space-y-4 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-xs font-semibold text-on-surface-variant uppercase tracking-wider">
+                Component Standards &bull; Modals
+            </div>
+            <h2 class="text-3xl md:text-4xl font-headline font-extrabold text-on-surface tracking-tight">
+                Responsive Confirmation Dialogs
+            </h2>
+            <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">
+                Standardized modal interfaces for critical user decisions, destructive actions (such as account or repository deletion), status warnings, and session management. Equipped with backdrop blur, keyboard accessibility (<kbd class="px-1.5 py-0.5 text-xs bg-surface-container-high rounded border border-outline-variant/50">Esc</kbd> to close), and focus trapping.
+            </p>
+        </section>
+
+        <!-- Modals Interactive Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- 1. Destructive Deletion Modal Card -->
+            <div class="bg-surface rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="p-6 md:p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-800 border border-red-200">
+                            <span class="material-symbols-outlined text-sm">delete_forever</span>
+                            Destructive Action
+                        </span>
+                        <span class="text-xs text-on-surface-variant font-mono">#modal-delete</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface">Account / Data Deletion</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Used when an action will permanently destroy data or user records. Features a distinct red warning badge, high-contrast action buttons, and clear explanation of irreversibility.
+                    </p>
+                    <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 text-xs text-on-surface-variant space-y-1">
+                        <p class="font-semibold text-on-surface">Typical Use Cases:</p>
+                        <ul class="list-disc list-inside space-y-0.5">
+                            <li>Deleting a user account or organization</li>
+                            <li>Removing a production database or repository</li>
+                            <li>Revoking permanent security licenses</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-surface-container-low/40 border-t border-outline-variant/20 flex justify-end">
+                    <button type="button" onclick="openModal('modal-delete')" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-medium text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">delete</span>
+                        <span>Test Deletion Modal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Status Warning / Revoke Modal Card -->
+            <div class="bg-surface rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="p-6 md:p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                            <span class="material-symbols-outlined text-sm">warning</span>
+                            Status Warning
+                        </span>
+                        <span class="text-xs text-on-surface-variant font-mono">#modal-warning</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface">Revoke Access / Downgrade</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Used for high-impact changes that alter active services, billing plans, or security keys without destroying stored data. Prompts the user to verify intent before execution.
+                    </p>
+                    <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 text-xs text-on-surface-variant space-y-1">
+                        <p class="font-semibold text-on-surface">Typical Use Cases:</p>
+                        <ul class="list-disc list-inside space-y-0.5">
+                            <li>Revoking API access tokens or webhook keys</li>
+                            <li>Downgrading subscription tier or removing seats</li>
+                            <li>Disabling multi-factor authentication (MFA)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-surface-container-low/40 border-t border-outline-variant/20 flex justify-end">
+                    <button type="button" onclick="openModal('modal-warning')" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-medium text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">key_off</span>
+                        <span>Test Warning Modal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Publish / Broadcast Confirmation Card -->
+            <div class="bg-surface rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="p-6 md:p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-200">
+                            <span class="material-symbols-outlined text-sm">rocket_launch</span>
+                            Information &bull; Action
+                        </span>
+                        <span class="text-xs text-on-surface-variant font-mono">#modal-publish</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface">Production Publish / Deploy</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Used when initiating significant system broadcasts, global notifications, or live production deployments. Provides a final review checkpoint before triggering automated workflows.
+                    </p>
+                    <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 text-xs text-on-surface-variant space-y-1">
+                        <p class="font-semibold text-on-surface">Typical Use Cases:</p>
+                        <ul class="list-disc list-inside space-y-0.5">
+                            <li>Deploying software releases to live production</li>
+                            <li>Sending mass email announcements to subscribers</li>
+                            <li>Applying global configuration overrides</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-surface-container-low/40 border-t border-outline-variant/20 flex justify-end">
+                    <button type="button" onclick="openModal('modal-publish')" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary hover:bg-on-primary-fixed-variant text-white font-medium text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 cursor-pointer">
+                        <span class="material-symbols-outlined text-lg">send</span>
+                        <span>Test Publish Modal</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Session Logout Modal Card -->
+            <div class="bg-surface rounded-2xl border border-outline-variant/30 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow">
+                <div class="p-6 md:p-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-800 border border-gray-200">
+                            <span class="material-symbols-outlined text-sm">logout</span>
+                            Session Management
+                        </span>
+                        <span class="text-xs text-on-surface-variant font-mono">#modal-logout</span>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface">Session Logout Confirmation</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Ensures users do not accidentally terminate active working sessions, especially when uncommitted forms or drafts might be open in background tabs.
+                    </p>
+                    <div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/20 text-xs text-on-surface-variant space-y-1">
+                        <p class="font-semibold text-on-surface">Typical Use Cases:</p>
+                        <ul class="list-disc list-inside space-y-0.5">
+                            <li>Logging out from dashboard navigation menus</li>
+                            <li>Terminating remote authenticated sessions</li>
+                            <li>Switching active organization profiles</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-surface-container-low/40 border-t border-outline-variant/20 flex justify-end">
+                    <button type="button" onclick="openModal('modal-logout')" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-container-high hover:bg-outline-variant/40 text-on-surface font-medium text-sm shadow-2xs transition-all focus:outline-none cursor-pointer border border-outline-variant/30">
+                        <span class="material-symbols-outlined text-lg text-on-surface-variant">logout</span>
+                        <span>Test Logout Modal</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================================================= -->
+    <!-- INTERACTIVE MODAL OVERLAYS -->
+    <!-- ========================================================================= -->
+
+    <!-- 1. Destructive Deletion Modal -->
+    <div id="modal-delete" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" onclick="handleBackdropClick(event, 'modal-delete')">
+        <div class="bg-surface rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-outline-variant/30 relative transform scale-95 transition-transform duration-200" onclick="event.stopPropagation()">
+            <!-- Close X Button -->
+            <button type="button" onclick="closeModal('modal-delete')" class="absolute top-5 right-5 p-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Close modal">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-red-100 border border-red-200 flex items-center justify-center text-red-600 shrink-0 shadow-2xs">
+                    <span class="material-symbols-outlined text-2xl">delete_forever</span>
+                </div>
+                <div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface leading-tight">Delete User Account</h3>
+                    <p class="text-xs text-on-surface-variant font-light mt-0.5">Permanent destructive action &bull; Immediate effect</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <p class="text-sm text-on-surface leading-relaxed">
+                    Are you sure you want to permanently delete the account for <strong class="font-semibold text-red-600">Sarah Jenkins (sarah.j@example.com)</strong>?
+                </p>
+                <div class="p-3.5 rounded-xl bg-red-50/70 border border-red-200/60 text-xs text-red-800 space-y-1.5">
+                    <p class="font-semibold flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">warning</span> Warning: Irreversible Consequences
+                    </p>
+                    <ul class="list-disc list-inside pl-1 space-y-0.5 text-red-700 font-light">
+                        <li>All project files, audit logs, and reports will be purged.</li>
+                        <li>Active API tokens and SSH keys will be immediately revoked.</li>
+                        <li>Automated billing subscriptions will be canceled.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-end items-center gap-3 pt-4 border-t border-outline-variant/20">
+                <button type="button" onclick="closeModal('modal-delete')" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-outline-variant/50 text-on-surface font-medium text-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+                    Cancel
+                </button>
+                <button type="button" onclick="confirmAction('modal-delete', 'User account permanently deleted!')" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-sm shadow-md shadow-red-600/20 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-lg">delete</span>
+                    <span>Delete Permanently</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Status Warning / Revoke Access Modal -->
+    <div id="modal-warning" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" onclick="handleBackdropClick(event, 'modal-warning')">
+        <div class="bg-surface rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-outline-variant/30 relative transform scale-95 transition-transform duration-200" onclick="event.stopPropagation()">
+            <button type="button" onclick="closeModal('modal-warning')" class="absolute top-5 right-5 p-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Close modal">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-700 shrink-0 shadow-2xs">
+                    <span class="material-symbols-outlined text-2xl">key_off</span>
+                </div>
+                <div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface leading-tight">Revoke Production API Key</h3>
+                    <p class="text-xs text-on-surface-variant font-light mt-0.5">Security status change &bull; Reauthentication required</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <p class="text-sm text-on-surface leading-relaxed">
+                    You are about to revoke the production API key <code class="px-1.5 py-0.5 rounded bg-surface-container font-mono text-xs text-amber-700">pk_live_9a8b...7f1c</code>.
+                </p>
+                <div class="p-3.5 rounded-xl bg-amber-50/70 border border-amber-200/60 text-xs text-amber-800 space-y-1.5">
+                    <p class="font-semibold flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">info</span> Impact Analysis
+                    </p>
+                    <p class="text-amber-700 font-light">
+                        Any live integrations or third-party webhooks relying on this key will fail immediately with HTTP 401 Unauthorized errors until replaced with a newly generated token.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-end items-center gap-3 pt-4 border-t border-outline-variant/20">
+                <button type="button" onclick="closeModal('modal-warning')" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-outline-variant/50 text-on-surface font-medium text-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+                    Keep Active
+                </button>
+                <button type="button" onclick="confirmAction('modal-warning', 'API Key has been revoked successfully.')" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white font-semibold text-sm shadow-md shadow-amber-600/20 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-lg">block</span>
+                    <span>Revoke Access Key</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Publish / Deploy Confirmation Modal -->
+    <div id="modal-publish" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" onclick="handleBackdropClick(event, 'modal-publish')">
+        <div class="bg-surface rounded-3xl max-w-lg w-full p-6 md:p-8 shadow-2xl border border-outline-variant/30 relative transform scale-95 transition-transform duration-200" onclick="event.stopPropagation()">
+            <button type="button" onclick="closeModal('modal-publish')" class="absolute top-5 right-5 p-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Close modal">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600 shrink-0 shadow-2xs">
+                    <span class="material-symbols-outlined text-2xl">rocket_launch</span>
+                </div>
+                <div>
+                    <h3 class="text-xl font-headline font-bold text-on-surface leading-tight">Deploy to Production</h3>
+                    <p class="text-xs text-on-surface-variant font-light mt-0.5">Release v2.4.0-stable &bull; Global CDN distribution</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <p class="text-sm text-on-surface leading-relaxed">
+                    You are ready to publish build <strong class="font-semibold text-primary">#4892 (v2.4.0)</strong> to all active production clusters.
+                </p>
+                <div class="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/30 text-xs text-on-surface-variant space-y-2">
+                    <div class="flex justify-between items-center pb-1.5 border-b border-outline-variant/20">
+                        <span>Target Clusters:</span>
+                        <span class="font-medium text-on-surface">us-east-1, eu-west-1, ap-southeast-1</span>
+                    </div>
+                    <div class="flex justify-between items-center pb-1.5 border-b border-outline-variant/20">
+                        <span>Estimated Downtime:</span>
+                        <span class="font-medium text-green-600">Zero (Rolling Blue/Green)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span>Notify Team Channels:</span>
+                        <span class="font-medium text-primary">#devops-alerts, #releases</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-end items-center gap-3 pt-4 border-t border-outline-variant/20">
+                <button type="button" onclick="closeModal('modal-publish')" class="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-outline-variant/50 text-on-surface font-medium text-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+                    Review Later
+                </button>
+                <button type="button" onclick="confirmAction('modal-publish', 'Deployment initiated! Check CI/CD logs for details.')" class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-primary hover:bg-on-primary-fixed-variant text-white font-semibold text-sm shadow-md shadow-primary/20 transition-all cursor-pointer">
+                    <span class="material-symbols-outlined text-lg">send</span>
+                    <span>Confirm &amp; Deploy</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Session Logout Confirmation Modal -->
+    <div id="modal-logout" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-200" onclick="handleBackdropClick(event, 'modal-logout')">
+        <div class="bg-surface rounded-3xl max-w-sm w-full p-6 md:p-7 shadow-2xl border border-outline-variant/30 relative transform scale-95 transition-transform duration-200 text-center" onclick="event.stopPropagation()">
+            <button type="button" onclick="closeModal('modal-logout')" class="absolute top-4 right-4 p-1.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" title="Close modal">
+                <span class="material-symbols-outlined text-xl">close</span>
+            </button>
+            
+            <div class="w-14 h-14 shrink-0 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-on-surface mx-auto mb-4 shadow-sm">
+                <span class="material-symbols-outlined text-3xl text-on-surface-variant">logout</span>
+            </div>
+            
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-2">Sign Out of Account?</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed mb-6">
+                Are you sure you want to sign out of <strong class="text-on-surface">admin@example.com</strong>? Any unsaved changes in active tabs will be lost.
+            </p>
+
+            <div class="flex gap-3">
+                <button type="button" onclick="closeModal('modal-logout')" class="flex-1 px-4 py-2.5 rounded-xl border border-outline-variant/50 text-on-surface font-medium text-sm hover:bg-surface-container-low transition-colors cursor-pointer">
+                    Cancel
+                </button>
+                <button type="button" onclick="confirmAction('modal-logout', 'Signed out successfully.')" class="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold text-sm shadow-md shadow-red-600/20 transition-all cursor-pointer">
+                    <span>Sign Out</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Modal Interactive Controller Logic -->
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            // Trigger reflow for transition
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+            const box = modal.firstElementChild;
+            if (box) {
+                box.classList.remove('scale-95');
+                box.classList.add('scale-100');
+            }
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            const box = modal.firstElementChild;
+            if (box) {
+                box.classList.remove('scale-100');
+                box.classList.add('scale-95');
+            }
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 200);
+        }
+
+        function handleBackdropClick(event, modalId) {
+            if (event.target.id === modalId) {
+                closeModal(modalId);
+            }
+        }
+
+        function confirmAction(modalId, toastMessage) {
+            closeModal(modalId);
+            showToast(toastMessage);
+        }
+
+        function showToast(message) {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            const toast = document.createElement('div');
+            toast.className = 'bg-surface text-on-surface px-5 py-3.5 rounded-2xl shadow-xl border border-outline-variant/40 flex items-center gap-3 transform translate-y-4 opacity-0 transition-all duration-300 pointer-events-auto';
+            toast.innerHTML = `
+                <div class="w-7 h-7 rounded-full bg-green-100 text-green-700 flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-sm font-bold">check</span>
+                </div>
+                <span class="text-sm font-medium">${message}</span>
+            `;
+            container.appendChild(toast);
+            void toast.offsetWidth;
+            toast.classList.remove('translate-y-4', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-4', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        // Global Escape Key Listener for Modals
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                ['modal-delete', 'modal-warning', 'modal-publish', 'modal-logout'].forEach(id => {
+                    const modal = document.getElementById(id);
+                    if (modal && !modal.classList.contains('hidden')) {
+                        closeModal(id);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

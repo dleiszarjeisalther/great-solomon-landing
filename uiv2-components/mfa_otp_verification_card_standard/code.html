@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<link href="../app.css" rel="stylesheet"/>
+<script src="../app.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MFA Verification</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest flex items-center justify-center min-h-screen font-body text-on-surface antialiased p-4">
+<!-- MFA Card -->
+<div class="bg-surface-container-lowest w-full max-w-md p-8 rounded-xl shadow-lg border border-outline-variant/30 flex flex-col items-center text-center">
+<!-- Icon -->
+<div class="w-16 h-16 bg-primary-container/10 text-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<!-- Header -->
+<h2 class="text-2xl font-bold font-headline mb-2 text-on-background tracking-tight">Verify your identity</h2>
+<p class="text-on-surface-variant text-sm mb-8 max-w-[280px] mx-auto leading-relaxed">
+            We've sent a 6-digit verification code to your email.
+        </p>
+<!-- OTP Input Form -->
+<form class="w-full" onsubmit="event.preventDefault();">
+<div class="flex justify-between gap-2 sm:gap-3 mb-6" id="otp-container">
+<input autocomplete="one-time-code" class="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-semibold bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all shadow-sm" inputmode="numeric" maxlength="1" pattern="[0-9]" required="" type="text"/>
+<input class="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-semibold bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all shadow-sm" inputmode="numeric" maxlength="1" pattern="[0-9]" required="" type="text"/>
+<input class="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-semibold bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all shadow-sm" inputmode="numeric" maxlength="1" pattern="[0-9]" required="" type="text"/>
+<input class="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-semibold bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all shadow-sm" inputmode="numeric" maxlength="1" pattern="[0-9]" required="" type="text"/>
+<input class="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-semibold bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all shadow-sm" inputmode="numeric" maxlength="1" pattern="[0-9]" required="" type="text"/>
+<input class="w-10 h-12 sm:w-12 sm:h-14 text-center text-xl font-semibold bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface focus:border-primary-container focus:ring-2 focus:ring-primary-container focus:outline-none transition-all shadow-sm" inputmode="numeric" maxlength="1" pattern="[0-9]" required="" type="text"/>
+</div>
+<!-- Expiry info -->
+<div class="flex items-center justify-center gap-1.5 text-xs text-on-surface-variant font-label mb-8">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                Code expires in 10 minutes
+            </div>
+<!-- Action Button -->
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary font-medium py-3 px-4 rounded-lg shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-container active:bg-primary-fixed-variant mb-6" type="submit">
+                Verify Code
+            </button>
+</form>
+<!-- Resend Link -->
+<p class="text-sm text-on-surface-variant">
+            Didn't receive the code? 
+            <button class="text-primary-container hover:text-primary font-medium hover:underline focus:outline-none transition-colors" type="button">
+                Resend code
+            </button>
+</p>
+<div class="mt-6 pt-6 border-t border-outline-variant/30 text-center">
+<a class="inline-flex items-center justify-center gap-1.5 text-xs font-medium text-on-surface-variant hover:text-primary transition-colors" href="../authentication_card_component_standard/code.html" id="back-to-login-link">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+                Back to Sign In
+            </a>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const subsystem = params.get('subsystem');
+    if (subsystem) {
+        const backLink = document.getElementById('back-to-login-link');
+        if (backLink) backLink.href = `../authentication_card_component_standard/code.html?subsystem=${encodeURIComponent(subsystem)}`;
+    }
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('#otp-container input');
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', (e) => {
+            if (input.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !input.value && index > 0) {
+                inputs[index - 1].focus();
+            }
+        });
+    });
+
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const params = new URLSearchParams(window.location.search);
+        const subsystem = params.get('subsystem') || 'client-management';
+        window.location.href = `../dashboard_app_layout/code.html?subsystem=${encodeURIComponent(subsystem)}`;
+    });
+});
+</script>
+</body></html>
+
+
+
+
+
