@@ -1,7 +1,9 @@
 FROM nginx:alpine
 
-# Copy custom nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+ENV PORT=80
+
+# Copy nginx template which supports dynamic $PORT via envsubst
+COPY default.conf.template /etc/nginx/templates/default.conf.template
 
 # Copy static assets to web root
 COPY . /usr/share/nginx/html
