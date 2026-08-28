@@ -1,3 +1,7 @@
-.git
+﻿.git
 .gitignore
-README.md
+Dockerfile
+default.conf.template
+.dockerignore
+*.md
+*.bak
