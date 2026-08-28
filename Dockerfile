@@ -1,4 +1,4 @@
-﻿FROM nginx:alpine
+FROM nginx:alpine
 
 ENV PORT=8080
 
