@@ -1,7 +1,4 @@
 ﻿.git
 .gitignore
-Dockerfile
-default.conf.template
-.dockerignore
 *.md
 *.bak
