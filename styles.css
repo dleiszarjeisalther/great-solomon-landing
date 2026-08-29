@@ -1,7 +1,7 @@
 :root { --navy:#071b3f; --navy-2:#0b2b65; --blue:#155bd7; --indigo:#4f46e5; --cyan:#25c2d7; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --surface:#fff; --soft:#f4f7fb; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { margin:0; min-height:100vh; color:var(--ink); background:var(--soft); font-family:Inter,system-ui,sans-serif; }
+body { overflow-x:hidden; margin:0; min-height:100vh; color:var(--ink); background:var(--soft); font-family:Inter,system-ui,sans-serif; }
 button,input { font:inherit; } a { color:inherit; } .material-symbols-outlined { font-size:20px; line-height:1; }
 .topbar { position:sticky; top:0; z-index:50; height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 clamp(20px,4vw,64px); border-bottom:1px solid rgba(226,232,240,.9); background:rgba(255,255,255,.92); backdrop-filter:blur(18px) saturate(160%); }
 .brand { display:flex; align-items:center; gap:14px; min-width:0; text-decoration:none; }
