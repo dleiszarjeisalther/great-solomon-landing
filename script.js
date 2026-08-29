@@ -22,10 +22,21 @@ function playScrollHint(){
   setTimeout(()=>{
     if(cancelled||window.scrollY>4)return;
     const systemsTop=document.getElementById('systems').offsetTop;
-    const peekDistance=Math.min(110,Math.max(48,systemsTop-window.innerHeight+72));
+    const peekDistance=Math.min(180,Math.max(72,systemsTop-window.innerHeight+120));
     window.scrollTo({top:peekDistance,behavior:'smooth'});
     setTimeout(()=>{if(!cancelled)window.scrollTo({top:0,behavior:'smooth'});},750);
   },900);
 }
-playScrollHint();
-
+if(document.readyState==='complete')playScrollHint();else window.addEventListener('load',playScrollHint,{once:true});
+const mobileMenu=document.querySelector('.mobile-menu');
+const topbar=document.querySelector('.topbar');
+function setMobileMenu(open){
+  topbar.classList.toggle('menu-open',open);
+  mobileMenu.setAttribute('aria-expanded',String(open));
+  mobileMenu.setAttribute('aria-label',open?'Close navigation':'Open navigation');
+  mobileMenu.querySelector('.material-symbols-outlined').textContent=open?'close':'menu';
+}
+mobileMenu.addEventListener('click',()=>setMobileMenu(!topbar.classList.contains('menu-open')));
+document.querySelectorAll('#mobile-navigation a').forEach(link=>link.addEventListener('click',()=>setMobileMenu(false)));
+document.addEventListener('click',event=>{if(topbar.classList.contains('menu-open')&&!topbar.contains(event.target))setMobileMenu(false);});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&topbar.classList.contains('menu-open'))setMobileMenu(false);});
