@@ -1,0 +1,7 @@
+# robots.txt for https://greatsolomonmpservices.com/
+User-agent: *
+Allow: /
+Disallow: /uiv2-components/
+
+# Sitemaps
+Sitemap: https://greatsolomonmpservices.com/sitemap.xml
