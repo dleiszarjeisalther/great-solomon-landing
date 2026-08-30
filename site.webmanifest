@@ -1,21 +1,39 @@
 {
-  "name": "Great Solomon Manpower Services",
+  "name": "Great Solomon Manpower Services, Inc.",
   "short_name": "Great Solomon",
   "description": "Connecting job seekers with opportunities and employers with dependable talent across the Philippines.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#071b3f",
+  "background_color": "#ffffff",
   "theme_color": "#071b3f",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "images/favicon.png",
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "images/logo-icon.png",
+      "src": "/favicon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
