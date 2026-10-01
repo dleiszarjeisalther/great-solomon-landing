@@ -40,3 +40,50 @@ mobileMenu.addEventListener('click',()=>setMobileMenu(!topbar.classList.contains
 document.querySelectorAll('#mobile-navigation a').forEach(link=>link.addEventListener('click',()=>setMobileMenu(false)));
 document.addEventListener('click',event=>{if(topbar.classList.contains('menu-open')&&!topbar.contains(event.target))setMobileMenu(false);});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&topbar.classList.contains('menu-open'))setMobileMenu(false);});
+
+// Google Analytics 4 Portal Outbound Routing Telemetry
+function trackPortalRouting(destination, label) {
+  if (typeof gtag === 'function') {
+    gtag('event', 'portal_route_click', {
+      event_category: 'Portal Routing',
+      destination: destination,
+      event_label: label || destination,
+      transport_type: 'beacon'
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Hero CTA Buttons
+  document.querySelectorAll('.hero-actions a').forEach(btn => {
+    const text = (btn.textContent || '').toLowerCase();
+    if (text.includes('job')) {
+      btn.addEventListener('click', () => trackPortalRouting('job_seeker', 'Hero Find a Job'));
+    } else if (text.includes('talent')) {
+      btn.addEventListener('click', () => trackPortalRouting('employer', 'Hero Hire Talent'));
+    }
+  });
+
+  // Audience Path Cards
+  document.querySelectorAll('.audience-card').forEach(card => {
+    const text = (card.textContent || '').toLowerCase();
+    if (text.includes('job seeker') || text.includes('applicant')) {
+      card.addEventListener('click', () => trackPortalRouting('job_seeker', 'Audience Job Seeker'));
+    } else if (text.includes('employer') || text.includes('client')) {
+      card.addEventListener('click', () => trackPortalRouting('employer', 'Audience Employer Client'));
+    } else if (text.includes('deployed employee')) {
+      card.addEventListener('click', () => trackPortalRouting('employee', 'Audience Deployed Employee'));
+    } else if (text.includes('staff')) {
+      card.addEventListener('click', () => trackPortalRouting('staff', 'Audience Staff Access'));
+    }
+  });
+
+  // Subsystem Cards in Catalog Grid
+  document.getElementById('grid')?.addEventListener('click', event => {
+    const card = event.target.closest('.card');
+    if (card && card.dataset.url) {
+      const title = card.querySelector('h3')?.textContent || 'Subsystem';
+      trackPortalRouting('subsystem', title);
+    }
+  });
+});
