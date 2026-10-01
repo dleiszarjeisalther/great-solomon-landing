@@ -43,17 +43,29 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&topbar.clas
 
 // Google Analytics 4 Portal Outbound Routing Telemetry
 function trackPortalRouting(destination, label) {
-  if (typeof gtag === 'function') {
+  const isGtagReady = typeof gtag === 'function';
+  console.log('%c[GA4 Telemetry] Portal Routing Click:', 'color: #2563eb; font-weight: bold;', {
+    destination: destination,
+    label: label || destination,
+    gtagReady: isGtagReady,
+    time: new Date().toLocaleTimeString()
+  });
+
+  if (isGtagReady) {
     gtag('event', 'portal_route_click', {
       event_category: 'Portal Routing',
       destination: destination,
       event_label: label || destination,
       transport_type: 'beacon'
     });
+    console.log('%c[GA4 Telemetry] -> Event sent to Google Analytics (G-ZB2487101N)', 'color: #059669; font-weight: bold;');
+  } else {
+    console.warn('[GA4 Telemetry] Warning: gtag() is not available (check if blocked by ad-blocker or script error).');
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('[GA4 Telemetry] Initialized on page. gtag available:', typeof gtag === 'function');
   // Hero CTA Buttons
   document.querySelectorAll('.hero-actions a').forEach(btn => {
     const text = (btn.textContent || '').toLowerCase();
