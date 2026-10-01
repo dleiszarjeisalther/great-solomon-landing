@@ -64,6 +64,9 @@ function trackPortalRouting(destination, label) {
   }
 }
 
+// Make accessible globally and in DevTools Console
+window.trackPortalRouting = trackPortalRouting;
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('[GA4 Telemetry] Initialized on page. gtag available:', typeof gtag === 'function');
   // Hero CTA Buttons
